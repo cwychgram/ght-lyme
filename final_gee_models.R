@@ -6,6 +6,8 @@ library(splines)
 
 df <- read.csv("minimal_data_set.csv") 
 
+df <- df[!is.na(df$search_ld), ]
+
 df$search_ld_100 <- df$search_ld / 100
 df$elev_25 <- df$elev / 25
 df$max_ndvi_100 <- df$max_ndvi * 100
